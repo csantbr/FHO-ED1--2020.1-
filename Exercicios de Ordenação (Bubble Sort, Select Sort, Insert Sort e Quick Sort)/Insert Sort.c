@@ -2,11 +2,13 @@
 
 void insertSort(int *vetor, int n) {
   int aux, i, j;
+  
   for (i = 1; i < n; i++) {
     aux = vetor[i];
-    for (j = i - 1; (j >= 0) && (aux < vetor[j]); j--)
-      vetor[j + 1] = vetor[j];
-
+    for (j = i - 1; (j >= 0) && (aux < vetor[j]); j--) {
+		vetor[j + 1] = vetor[j];
+	}
+	
 	vetor[j + 1] = aux;
   }
 }
