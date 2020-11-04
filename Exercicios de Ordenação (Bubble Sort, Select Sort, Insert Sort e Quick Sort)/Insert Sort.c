@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 void insertSort(int *vetor, int n) {
-  int aux, i, j;
+	int aux, i, j;
   
-  for (i = 1; i < n; i++) {
-    aux = vetor[i];
-    for (j = i - 1; (j >= 0) && (aux < vetor[j]); j--) {
-		vetor[j + 1] = vetor[j];
-	}
+	for (i = 1; i < n; i++) {
+		aux = vetor[i];
+		for (j = i - 1; (j >= 0) && (aux < vetor[j]); j--) {
+			vetor[j + 1] = vetor[j];
+		}
 	
-	vetor[j + 1] = aux;
-  }
+		vetor[j + 1] = aux;
+	}	
 }
 
 int main() {
